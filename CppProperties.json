@@ -1,0 +1,23 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build can_server",
+      "type": "shell",
+      "command": "g++",
+      "args": [
+        "-std=c++17",
+        "-DCPPHTTPLIB_USE_POLL",
+        "-I.",                    
+        "-g",
+        "can_server.cpp",         
+        "-o", "can_server.exe",   
+        "-lws2_32",               
+        "-lECanVci64",             
+        "-lECanVci"              
+      ],
+      "group": { "kind": "build", "isDefault": true },
+      "problemMatcher": ["$gcc"]
+    }
+  ]
+}

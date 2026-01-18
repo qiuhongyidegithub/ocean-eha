@@ -1,0 +1,1971 @@
+/*大屏*/
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box}
+    
+
+*,body{padding:0px;	margin:0px;color: #222;font-family: "微软雅黑";  zoom: 1.0;}
+html,body{
+    background: url("../images/bg01.png") no-repeat;
+    background-size: cover;
+    font-size: .16rem;
+    color: #ffffff;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    
+    -webkit-user-select: none; /* 针对 Webkit 浏览器（如 Safari） */
+    -moz-user-select: none; /* 针对 Firefox 浏览器 */
+    -ms-user-select: none; /* 针对 IE/Edge 浏览器 */
+    user-select: none; /* 禁止选中网页内容 */
+    
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+ul,ol{
+    list-style: none;
+}
+.allnav{
+    width: 50%; /* 左右各占一半 */
+    height: 100%;
+}
+/*谷哥滚动条样式*/
+
+::-webkit-scrollbar {width:5px;height:5px;position:absolute}
+::-webkit-scrollbar-thumb {background-color:#5bc0de}
+::-webkit-scrollbar-track {background-color:#ddd}
+
+/***/
+.allnav{
+    height: 100%;
+}
+
+/*
+头部*/
+.header{
+    width: 100%;
+    height: 1.5rem;
+    /*background: red;*/
+
+}
+.header .header-left{
+    width: 25%;
+    height: 1.05rem;
+    color: white;
+/*    border: 1px solid green;*/
+    line-height: 1.05rem;
+    text-align: center;
+    color: #ffffff;
+    font-size: .3rem;
+    text-shadow: 0 0 .3rem #00d8ff;
+    line-height: 1.05rem;
+}
+.header .header-center{
+    width: 50%;
+    height: 1.05rem;
+    /*border: 1px solid red;*/
+/*    background: url("../images/head.gif") no-repeat;
+    background-size: 100% 100%;*/
+    position: relative;
+}
+.header .header-center .header-title{
+    text-align: center;
+    color: #ffffff;
+    font-size: .3rem;
+    text-shadow: 0 0 .3rem #00d8ff;
+    line-height: 1.05rem;
+}
+
+
+.header .header-img{
+    background: url("../assets/images/head.gif") no-repeat center center;
+    background-size: 100%;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: .4rem;
+}
+.header-img-responsive {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* 或者使用 'cover' 根据效果需求选择 */
+    opacity: 0.9;
+}
+
+
+.header .header-right{
+    width: 25%;
+    height: 1.05rem;
+    /*border: 1px solid gold;*/
+}
+.header .header-bottom{
+    width: calc(100% - .4rem);
+    height: .16rem;
+    background: url("../assets/images/header.png") no-repeat;
+    background-size: calc(100% - .2rem) 100%;
+
+    margin-left: .3rem;
+
+}
+
+/*
+内容*/
+.center {
+    padding: 0.05rem 0.2rem 0.05rem 0.2rem; /* 减少上下的 padding 值 */
+    margin-top: -10px; /* 移除 margin-top 以减少与 header 的距离 */
+}
+/* 左边、、、、、、、、、、、、、、、、、、、 */
+.center .center-left{
+    width: 20%;
+    padding: .1rem;
+/*    border: 1px solid red;*/
+
+}
+/* 左上、、、、、、、、、、、、、、、、 */
+.center .center-left .left-top{
+    width: 100%;
+    height: 3.2rem;
+    margin-bottom: .4rem;
+    /*background: url("../images/panel.png") no-repeat;
+    background-size: 100% 100%;*/
+    /*transform-style: preserve-3d;*/
+    border: 0.01rem solid #217093;
+    position: relative;
+    overflow: hidden;
+}
+
+.center .center-left .left-top h1{
+    color: white;
+    font-size: .4rem;
+    transform: rotateX(0deg);
+    /*display: flex;*/
+    align-items: center;
+    margin-bottom: 8px;
+    position: relative;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    transform-origin: 50% 50%;
+    /*transform: rotateX(0deg);*/
+    /*width: 100%;*/
+    transition: transform 500ms cubic-bezier(0.15, 0.52, 0.5, 0.9) 0s;
+    /*height: 24px;*/
+    /*过渡效果*/
+    transition: all 1s;
+}
+.cen-top svg {
+    width: 100%; /* 让 SVG 宽度填充容器 */
+    height: 100%; /* 让 SVG 高度填充容器 */
+}
+/*.center .center-left .left-top h1:hover{
+    transform: rotateX(360deg);
+    transition: all 2s;
+}*/
+
+.title{
+    width: 90%;
+    height: 0.3rem;
+/*    border: 1px solid gold;*/
+    position: relative;
+    top:.1rem;
+    font-size: .25rem;
+    left: .25rem;
+    color: rgb(255, 255, 255);
+    padding-left: 0.12rem;
+    line-height: 0.3rem;
+    font-family: '宋体', SimSun, serif;  /* 使用宋体字体 */
+
+
+}
+.title:before{
+    width: 0.05rem;
+    height: 0.25rem;
+    top: 0.02rem;
+    position: absolute;
+    content: "";
+    background: #59ebe8;
+    border-radius: 0.08rem;
+    left: 0;
+}
+.top-list p{
+    font-size: 130%;
+    color: #029698;
+    padding: .3rem;
+}
+.top-list li  {
+    float: left;
+    font-size: 160%;
+    color: #f2f2f2;
+    width: 50%;
+    height: .3rem;
+    line-height: .23rem;
+    padding: .35rem;
+   
+}
+
+
+.top-list li span {
+    margin-left: auto; /* 将状态内容靠左 */
+    margin-left: .3rem; /* 增加左右间距，保持布局清晰 */
+    line-height: normal; /* 去除行高设置，确保显示居中 */
+    font-size: 100%;
+    color: yellow;
+    font-weight: bold;
+    transition: color 0.3s;
+    cursor: pointer; /* 鼠标悬停效果 */
+}
+.top-list li span:hover{
+
+    color: #ff2600; /* 悬停时字体颜色 */
+    
+}
+
+/* 坐下、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、 */
+.center .center-left .left-cen{
+    position: relative; /* 使子元素相对于这个容器定位 */
+    display: flex; /* 使用 Flexbox 布局 */
+    width: 100%;
+    height: 6.8rem;
+    margin-bottom: .4rem;
+    /*background: url("../images/panel.png") no-repeat;
+    background-size: 100% 100%;*/
+    border: 0.01rem solid #217093;
+}
+.center .center-left .left-cen .company{
+    width: calc(100% - .2rem);
+    height: calc(100% - .6rem);
+    margin-left: .1rem;
+    margin-top: .1rem;
+    /*border: 1px solid red;*/
+    padding: .2rem;
+    box-sizing: border-box;
+}
+.center .center-left .left-cen .company li{
+    color: white;
+    height: .3rem;
+    line-height: .3rem;
+}
+
+
+.center .center-cen{
+    width: 52.5%;
+    padding: .1rem;
+}
+.center .center-cen .cen-top{
+    width: 100%;
+    height: 7.0rem;
+    /*background: url("../images/a.png") no-repeat;
+    background-size: 100% 100%;*/
+    border: 0.01rem solid #217093;
+    margin-bottom: .2rem;
+    position: relative;
+}
+
+
+.center .center-cen .cen-top .top-title{
+    position: absolute;
+    width: 35%;
+    height: 1.5rem;
+    /*border: 1px solid red;*/
+    left: .5rem;
+    top:.5rem;
+}
+.center .center-cen .cen-top .top-title li{
+    float: left;
+    width: 50%;
+    height: 1rem;
+    /*border: 1px solid green;*/
+}
+
+/* 设置绝对定位图片的通用样式 .......................................................................*/
+.center .center-cen .cen-top .absolute-img {
+    position: absolute;
+    height: auto; /* 保证等比例缩放 */
+    transform-origin: center center;
+      object-fit: cover;
+
+}
+
+/* 每张图片的具体位置（可根据需求调整） */
+.center .center-cen .cen-top .img1 {
+    top: 3.5rem;
+    left: -0.5rem;
+    width: 45vw; /* 图像1的宽度 */
+}
+
+.center .center-cen .cen-top .img2 {
+    top: 5.55rem !important;
+    left: 2.45rem !important;
+    width: 28vw !important;
+}
+
+.center .center-cen .cen-top .img3 {
+    top: 3.5rem;
+    left: -0.5rem;
+    width: 45vw; /* 图像1的宽度 */
+}
+
+.center .center-cen .cen-top .img4 {
+    top: 3.5rem;
+    left: -3.1em;
+    width: 45vw; /* 图像1的宽度 */
+    opacity: 0.5; /* 设置透明度为 50% */
+    
+}
+
+.center .center-cen .cen-top .img6 {
+    top: 5.7rem !important;
+    left: 1.8rem !important;
+    height: 3.7vw !important;
+    width: 24% ;
+     left: 0;         /* 锚定在左侧 */
+   position: relative;
+   
+  
+}
+.center .center-cen .cen-top .img5 {
+    top: 5.7rem !important;
+    right: -12em !important;
+    height: 3.7vw !important;
+ right: 0;         /* 锚定在左侧 */
+  width: 10%;      /* 初始宽度，也可以在 JS 里动态改 */
+      position: relative;
+   
+}
+/* 压力调节阀 */
+.center .center-cen .cen-top .img7 {
+    top: 0.9rem;
+    left: 14em;
+    height: 10vw;
+    width: 4vw; /* 图像1的宽度 */
+   
+}
+/* 电机 */
+.center .center-cen .cen-top .img8 {
+    top: 1.4rem;
+    left: 28.7em;
+    height: 4.7vw;
+    width: 7.7vw; /* 图像1的宽度 */
+    display:inline-block;
+   
+}
+/* 分流阀 */
+.center .center-cen .cen-top .img9 {
+    top: 0.4rem;
+    left: 28.403em;
+    height: 2vw;
+    width: 3vw; /* 图像1的宽度 */
+    display:inline-block;
+   
+}
+/* 推杆 */
+.center .center-cen .cen-top .img10 {
+    top: 1.5rem  !important;
+    left: 48.5em !important;
+    height: 11.7vw !important;
+    width: 5.8vw  !important;
+   
+}
+
+
+/* 分流阀下 */
+.center .center-cen .cen-top .img12 {
+    top: 2.91rem;
+    left: 28.65em;
+    height: 2vw;
+    width: 3.2vw; /* 图像1的宽度 */
+}
+/* 进度、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、 */
+/* 外部容器 */
+.progress-container {
+
+    position: absolute;
+    width: 80%;
+    height: 25%;
+    left: 10%;
+    top:69%;
+    max-width: 480px;
+
+    background-color: #36506c6e;
+    padding: 10px;
+    border-radius: 8px;
+
+    font-family: Arial, sans-serif;
+}
+
+/* 进度条标题 */
+.progress-label {
+
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10%;
+    
+    color: #ffcc00;
+}
+
+.progress-label .title {
+    
+    font-size: 190%;
+        left: -0%;
+    top:5%;
+    font-weight: bold;
+}
+
+.percentage {
+    color: #ebc506;
+    position: absolute;
+    left: 60%;
+    top:5%;
+    font-size: 220%;
+    font-weight: bold;
+    
+}
+
+/* 进度条 */
+.progress-bar {
+    width: 100%;
+    height: 20%;
+    border: 2px solid #f6f6f6;
+    border-radius: 4px;
+    overflow: hidden;
+    background-color: #e5e5e5;
+    position: relative;
+}
+
+/* 渐变填充条 */
+.progress-fill {
+    height: 100%;
+    width: 0; /* 初始宽度为 0 */
+    background: linear-gradient(to right, #FF8C00, #87CEEB);
+    transition: width 0.3s ease-in-out;
+    border-radius: 4px;
+}
+
+.progress-values{
+
+   
+    position: absolute;
+    left: .0rem;
+    top:1.2rem;
+    font-weight: bold;
+
+
+}
+
+.progress-values span{
+
+    color: #ffffff;
+ 
+
+    font-size: 150%;
+
+
+
+}
+
+.center .center-cen .cen-top .top-title li p,
+.center .center-cen .cen-top .top-title li span,
+.center .center-cen .cen-top .top-title li b{
+    color: #ffffff;
+}
+.center .center-cen .cen-top .top-title li p{
+    padding: .1rem;
+}
+.center .center-cen .cen-top .top-title li span{
+    text-align: center;
+    display: inline-block;
+    width: .35rem;
+    height: .45rem;
+    background: #37a9ea;
+    margin-left: .1rem;
+    line-height: .4rem;
+    font-size: .3rem;
+    margin-top: .1rem;
+}
+.center .center-cen .cen-top .top-bottom{
+    width: 100%;
+    height: 4.8rem;
+    /*border: 1px solid red;*/
+    position: absolute;
+    top:1.6rem;
+    padding: .2rem;
+    /*overflow: hidden;*/
+}
+
+.center .center-cen .cen-bottom {
+    width: 100%;
+    height: 3.2rem;
+    border: 0.01rem solid #217093;
+    display: flex; /* 使用 Flexbox 布局 */
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.center .cen-bottom .bottom-b {
+    width: calc(100% - 0.3rem);
+    height: 2.8rem;
+    
+    margin-left: 0.1rem;
+    margin-top: 0.1rem;
+    display: flex; /* 使用 Flexbox 布局 */
+    justify-content: space-between; /* 左右两部分分开 */
+    position: relative;
+}
+
+
+
+.center .cen-bottom .title {
+    width: 20%;
+
+}
+
+#export-container {
+  position: absolute;
+  top: -0.4rem   !important;        
+  right: -0.2rem !important;
+   font-size: .25rem !important;
+   
+}
+#export-container2 {
+  position: absolute;
+  top: -0.4rem   !important;        
+ right: 0.6rem !important;
+   font-size: .25rem !important;
+   
+}
+
+
+
+
+.chart-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.allnav {
+    width: 52%; /* 左右各占一半 */
+    height: 100%;
+}
+
+#chart1 {
+    background-color: #f1f1f100; /* 可以根据需要设置背景色 */
+}
+
+#chart2 {
+    background-color: #f1f1f100; /* 可以根据需要设置背景色 */
+}
+
+
+.center .center-right{
+    width: 27.5%;
+    padding: .1rem;
+}
+
+.center .center-right .right-top{
+    width: 100%;
+    height: 7.0rem;
+    margin-bottom: .2rem;
+    border: 0.01rem solid #217093;
+}
+
+.center .center-right .right-bottom{
+    width: 100%;
+    height: 3.2rem;
+    border: 0.01rem solid #ec0bca;
+    border: 0.01rem solid #217093;
+}
+
+.chat{
+    width: calc(100% - .2rem);
+    height: calc(100% - .6rem);
+    margin-top: .1rem;
+    margin-left: .1rem;
+    padding: .1rem;
+    /*overflow: hidden;*/
+}
+
+
+
+.gun{
+    /* width: 100%;*/
+    margin-top: .2rem;
+}
+.gun span{
+    display: block;
+    float: left;
+    height: .2rem;
+    width: 33%;
+    /*background: red;*/
+    /*margin: 15px 10px 10px 10px;*/
+    /*padding: 20px;*/
+    text-align: center;
+    font-size: 0.14rem;
+    font-weight: 600;
+    color: #61d2f7;
+    text-align: center;
+    margin-bottom: .1rem;
+}
+#FontScroll{
+    width: 100%;
+    height: 2.3rem;
+    overflow: hidden;
+    /*float: left;*/
+    margin-top: .1rem;
+    /*margin: 0 5%;*/
+    /*margin-left: 50px;*/
+
+    /*background: gold;*/
+
+}
+#FontScroll ul li{
+    height: .32rem;
+    width: 100%;
+    color: #ffffff;
+    text-align: center;
+    line-height: .32rem;
+    /*border-bottom: 1px dashed #404040;*/
+    /*width:33.3%;*/
+    overflow: hidden;
+    font-size: 0.14rem;
+    /*border-bottom: 1px dashed #404040;*/
+    /*width:33.3%;*/
+
+
+    /*background: red;
+    margin: 0 2%;*/
+
+}
+#FontScroll ul li:nth-child(1){
+    /*background-color: #072951;*/
+    box-shadow: -10px 0px 15px #034c6a inset, /*左边阴影*/
+    10px 0px 15px #034c6a inset;
+
+}
+#FontScroll ul li:hover{
+    box-shadow: -10px 0px 15px #034c6a inset, /*左边阴影*/
+    10px 0px 15px #034c6a inset;
+    cursor: pointer;
+}
+
+.fontInner span{
+    display:inline-block;
+    /*float: left;*/
+    /*height: 20px;*/
+    width:31%;
+    color: #ffffff;
+
+    /*background: red;*/
+
+}
+.fontInner span b{
+    display: inline-block;
+    width: .2rem;
+    height: .2rem;
+    border-radius: 0.03rem;
+    color: #ffffff;
+    line-height: .2rem;
+}
+/*#FontScroll ul li:nth-child(1) .fontInner span b{
+    background: #EB6841
+
+}*/
+/*大屏*/
+#FontScroll ul li:nth-child(8n-4) .fontInner span b{ background: #20a8fe }
+#FontScroll ul li:nth-child(8n-3) .fontInner span b{ background: #EB6841 }
+#FontScroll ul li:nth-child(8n-2) .fontInner span b{ background: #3FB8AF }
+#FontScroll ul li:nth-child(8n-1) .fontInner span b{ background: #FE4365 }
+#FontScroll ul li:nth-child(8n-5) .fontInner span b{ background: #FC9D9A }
+#FontScroll ul li:nth-child(8n-6) .fontInner span b{ background: #EDC951 }
+#FontScroll ul li:nth-child(8n-7) .fontInner span b{ background: #C8C8A9 }
+#FontScroll ul li:nth-child(8n) .fontInner span b{ background: #83AF9B }
+#FontScroll ul li:first-child .fontInner span b{ background: #036564 }
+#FontScroll ul li:last-child .fontInner span b{ background: #3299BB }
+
+/* 每个方框的背景 */
+@font-face {
+    font-family: 'HYZhuziChaoran';
+    src: url('/ttf/汉仪铸字超然体.TTF') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+.center .center-left .left-top, 
+.center .center-left .left-cen,
+.center .center-left .left-bottom,
+
+.center .center-cen .cen-bottom,
+.center .center-right .right-top,
+.center .center-right .right-cen,
+.center .center-right .right-bottom {
+ 
+    background: rgba(19, 128, 155, 0.186); /* 设置深蓝色背景，透明度为0.5 */
+}
+
+
+
+/* 下拉菜单、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、 */
+
+/* 父容器 */
+        .controltext {
+            font-size: 30px; /* 设置字体大小 */
+            color: rgb(208, 132, 56); /* 字体颜色为黄色 */
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            
+        }
+
+        .dropdown select {
+          color: rgb(255, 255, 255); /* 字体颜色为黄色 */
+          background-color: rgb(249, 249, 249);
+            border: 2px solid black; /* 边框颜色为黑色 */
+            font-size: 25px;
+            width: 200px;
+            height: 50px;
+
+            cursor: pointer;
+        }
+
+
+.pressure-container {
+    position: absolute; /* 绝对定位 */
+    flex-wrap: wrap;
+    width:2.3rem !important;
+    height: 1.3rem !important;
+    padding: .3rem !important;
+
+
+    
+    /* 背景颜色，渐变效果从透明淡蓝到深蓝 */
+    background: url(../assets/images/right3.png) no-repeat center;
+    background-size: contain;
+    justify-content: flex-start; /* 子元素从左开始排列 */
+    align-items: flex-start; /* 子元素在交叉轴上顶部对齐 */
+
+    flex-direction: column; /* 保持标签和数值上下排列 */
+    text-align: center; /* 确保文本居中 */
+}
+
+/* 通用按钮样式 */
+
+.pressure-label {
+            
+      font-size: .25rem !important;
+    color: rgb(255, 255, 255);
+    margin-bottom: 5%  !important;/* 增加底部间距 */
+
+
+
+    transition: color 0.3s;
+    text-align: center; /* 确保文本居中 */
+    font-weight: bold;
+    
+}
+.pressure-container b {
+    color: inherit; /* 继承父元素颜色 */
+    font-weight: bold; /* 保持加粗效果 */
+}
+
+
+.pressure-value {
+
+    font-size: 22px;
+    color: green;
+    font-weight: bold;
+    transition: color 0.3s;
+    text-align: center; /* 确保文本居中 */
+}
+
+
+
+/* 同时使用 margin-top 和 margin-left */
+.button1 {
+    margin-top:0%;
+    margin-left: 15%;
+}
+
+/* 其他按钮可以继续定义各自的 margin */
+
+
+
+/* 状态表示、、、、、、、、、、、、 */
+
+.state-value {
+
+    font-size: 30px;
+    color: green;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+
+
+
+
+
+
+/* 完成情况、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、 */
+
+  .center .center-left .left-cen .top5 {
+    width: 100%;
+    height: 80%;
+    float: left;
+    margin-top: 3%;
+  }
+  .center .center-left .left-cen .top5 .top5-content {
+    width: 100%;
+    height: 100%;
+    
+  }
+  .center .center-left .left-cen .top5 .top5-content ul {
+    width: 100%;
+    height: 100%;
+    
+  }
+  .center .center-left .left-cen .top5 .top5-content ul li {
+    width: 100%;
+    height: 25%;
+    margin-top: 5%;
+    position: relative;
+  }
+  .center .center-left .left-cen .top5 .top5-content ul li .li-content {
+    width: 140%;
+    height: 100%;
+    margin-left: -42%;
+    background: url(../assets/images/border.png) no-repeat center;
+    background-size: contain;
+    font-size: 0.5rem;
+    padding-left: 20%;
+    padding-top: 10%;
+    color: #000000;
+    box-sizing: border-box;
+    display: flex;
+    overflow: hidden; /* 隐藏超出部分 */
+  }
+  .center .center-left .left-cen .top5 .top5-content ul li .li-content span {
+    margin-right: 0%;
+    flex: 1; /* 每一部分均分 */
+    font-size: 0.23rem;
+    padding: 10% 2%; /* 根据需要调整内容内边距 */
+    color: #ffffff;
+    max-width: 33%; /* 每个部分最多占父容器的三分之一 */
+    white-space: nowrap; /* 防止内容换行 */
+    overflow: hidden;
+  
+    
+  }
+  .center .center-left .left-cen .top5 .top5-content ul li .li-content span b {
+    color: inherit; /* 继承父元素颜色 */
+    font-weight: bold; /* 保持加粗效果 */
+    cursor: pointer; /* 鼠标悬停效果 */
+}
+/* 默认 .cicle 样式 */
+.center .center-left .left-cen .top5 .top5-content ul li .cicle {
+    width: .9rem;
+    height: .9rem;
+    background: url(../assets/images/green.png) no-repeat center;
+    background-size: cover;
+    position: absolute;
+    left: -90%;
+    bottom: 0;
+}
+
+/* 旋转动画 */
+@keyframes rotateImage {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* 激活样式 */
+.center .center-left .left-cen .top5 .top5-content ul li .cicle.active-cicle {
+    background: url(../assets/images/orange.png) no-repeat center;
+    background-size: cover; /* 保持尺寸一致 */
+    animation: rotateImage 2s linear infinite; /* 仅添加旋转动画 */
+}
+
+.center .center-left .left-cen .top5 .top5-content ul li .active-content {
+    background: url(../assets/images/border2.png) no-repeat center !important;
+    background-size: contain;
+    font-size: 0.5rem;
+    padding-left: 20%;
+    padding-top: 10%;
+    height: 100%;
+      width: 140%;
+      
+}
+
+
+/* 控制面板布局
+
+*/
+
+
+/* 基本布局样式 */
+/* 容器样式 */
+.input-container {
+
+
+    justify-content: space-between; /* 将文字和输入框放在两侧 */
+    align-items: center;
+    background-color: #002f4b7b;
+    padding: 5% 5%;
+    border: 2px solid #0993ae;
+    margin-bottom: 5%;
+    color: #00aaff;
+    font-size: 0.19rem !important;
+    position: absolute; /* 绝对定位 */
+    top: 1.55rem !important;
+    right:0%; /* 距离左侧 10px */
+    width: 5.55rem !important;
+    height:0.75rem !important;
+}
+
+
+/* 标签样式 */
+.input-container label {
+    margin: 0%;
+    color: #ffffff; /* 左侧文字颜色 */
+    font-size: 140%; /* 左侧文字大小 */
+    cursor: pointer; /* 鼠标悬停效果 */
+}
+.input-container label:hover {
+   
+
+    color: #6e6e6e; /* 悬停时字体颜色 */
+    }
+
+/* 输入框样式 */
+.input-container input {
+  
+    text-align: right;
+    background-color: transparent;
+   height: 80%;
+    border: none;
+    outline: none;
+    width: 40%; /* 设置容器的宽度 */
+    font-size: 150%; /* 输入框文字大小 */
+    background-color: #0000007b;
+    color: #ff0000; 
+    text-align: center;
+    cursor: pointer; /* 鼠标悬停效果 */
+}
+.input-container input:hover {
+   
+    background-color: rgba(255, 255, 255, 0.1); /* 鼠标悬停时背景半透明效果 */
+    color: #f0e68c; /* 悬停时字体颜色 */
+    }
+
+/* placeholder 样式 */
+.input-container input::placeholder {
+    color: #00aaff;
+    opacity: 0.8;
+}
+
+
+.jindu {
+    width: 200px;
+    height: 200px;
+    border: 5px solid rgb(118, 218, 255);
+    border-radius: 50%;
+    overflow: hidden;
+}
+.wave-change {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: 0;
+    top: 0;
+    animation: change 12s infinite linear;
+    
+    &::before,
+    &::after{
+        content: "";
+        position: absolute;
+        width: 400px;
+        height: 400px;
+        top: 0;
+        left: 50%;
+        background-color: rgba(255, 255, 255, .6);
+        border-radius: 45% 47% 43% 46%;
+        transform: translate(-50%, -70%) rotate(0);
+        animation: rotate 7s linear infinite;
+        z-index: 1;
+    }
+    
+    &::after {
+        border-radius: 47% 42% 46% 44%;
+        background-color: rgba(255, 255, 255, .8);
+        transform: translate(-50%, -70%) rotate(0);
+        animation: rotate 9s linear -4s infinite;
+        z-index: 2;
+    }
+}
+.wave {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background-color: rgb(118, 218, 255);
+    border-radius: 50%;
+}
+
+p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 36px;
+    color: #000;
+    z-index: 10;
+}
+
+@keyframes rotate {
+   to {
+        transform: translate(-50%, -70%) rotate(360deg);
+    }
+}
+@keyframes change {
+    from {
+        top: 80px;
+    }
+    to {
+        top: -120px;
+    }
+}
+/* 危险警告、、、、、、、、、、 */
+/* 容器样式 */
+/* 容器样式 */
+.dangertext {
+    position: relative;
+    top: 5%;
+    left: 2.5%;
+    width: 95%;
+    height: 80%;
+    max-height: 300px;
+    overflow-y: auto; /* 添加垂直滚动条 */
+    font-family: '微软雅黑';
+    color: #ffffff;
+    background-color: #007fc800; /* 背景颜色 */
+}
+
+/* 表格样式 */
+.dangertext table {
+    width: 100%;
+    table-layout: fixed; /* 固定表格布局 */
+    border-collapse: collapse;
+}
+
+/* 每列的宽度比例 */
+.dangertext .col-2 {
+    width: 20%; /* 2 的比例 */
+}
+.dangertext .col-3 {
+    width: 20%; /* 2 的比例 */
+}
+
+.dangertext .col-4 {
+    width: 40%; /* 4 的比例 */
+}
+
+/* 表头样式 */
+.dangertext thead th {
+    position: sticky; /* 固定表头 */
+    top: 0; /* 固定在顶部 */
+    background-color: #19abff7a; /* 表头背景颜色 */
+    color: #ffffff; /* 表头文字颜色 */
+    padding: 10px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 130%;
+}
+
+/* 表格行的交替背景色 */
+.dangertext tbody tr:nth-child(odd) {
+    background-color: #ffffff84; /* 表头背景颜色 */
+}
+
+.dangertext tbody tr:nth-child(even) {
+    background-color: #19abff81; /* 表头背景颜色 */
+}
+
+/* 单元格样式 */
+.dangertext td, .dangertext th {
+    padding: 0.1rem!important;
+    color: #000000; /* 表头文字颜色 */
+    font-size: 0.2rem!important;
+    text-align: center;
+    font-family: '微软雅黑';
+}
+
+/* 导出按钮
+
+
+*/
+#export-button {
+  width: 0.75rem;
+  height: 0.35rem;
+  background: url('/assets/images/border_bg01.png') no-repeat center/cover;
+  color: #fff;
+  font-size: .15rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+#export-button:hover {
+  background-color: rgba(255,255,255,0.1);
+  color: #f0e68c;
+}
+
+
+
+
+#export-button2 {
+  width: .75rem;
+  height: 0.35rem;
+  background: url('/assets/images/border_bg01.png') no-repeat center/cover;
+  color: #fff;
+  font-size: .15rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+#export-button2:hover {
+  background-color: rgba(255,255,255,0.1);
+  color: #f0e68c;
+}
+
+
+
+
+
+
+
+
+
+
+.date-container {
+    background: url('../assets/images/bg1.png') no-repeat center center;
+    position: relative;
+    width: 23%; /* 按钮宽度 */
+    height: 14%; /* 按钮高度 */
+    font-size: 120%; /* 字体大小 */
+    flex-wrap: wrap;
+    padding: 1%;
+    background-size: contain;
+    justify-content: flex-start; /* 子元素从左开始排列 */
+    align-items: flex-start; /* 子元素在交叉轴上顶部对齐 */
+    flex-direction: column; /* 保持标签和数值上下排列 */
+    text-align: center; /* 确保文本居中 */
+}
+
+.date-container .label {
+   margin-bottom:10%;
+    color: #fcfbfb; /* 左侧文字颜色 */
+    font-size: 90%; /* 左侧文字大小 */
+    cursor: pointer; /* 鼠标悬停效果 */
+}
+.date-container .label:hover {
+
+    color: #999999; /* 悬停时字体颜色 */
+    }
+    
+.date-container b {
+    color: inherit; /* 继承父元素颜色 */
+    font-weight: bold; /* 保持加粗效果 */
+    cursor: pointer; /* 鼠标悬停效果 */
+}
+
+.date-container .value {
+    position: absolute;
+    font-size: 150%;
+    right:25%;
+    bottom: 20%;
+    width: 50%;
+    color: rgba(245, 18, 18, 0.986);
+    font-weight: bold;
+    background-color: #acd6e94f;
+}
+.date-container .value:hover {
+    cursor: pointer; /* 鼠标悬停效果 */
+    background-color: rgba(255, 255, 255, 0.1); /* 鼠标悬停时背景半透明效果 */
+    color: #f0e68c; /* 悬停时字体颜色 */
+    }
+    
+/* 绝对定位日期块 */
+.date1, .date2, .date3,.date4, .date5, .date6 {
+    position: absolute; /* 设置绝对定位 */
+}
+
+
+
+
+.date1 {
+    top: 5%;
+    right: -5%;
+    
+}
+
+.date2 {
+    top: 20%;
+    right: -5%;
+}
+
+.date3 {
+    top: 35%;
+    right: -5%;
+}
+
+.date4 {
+    top: 50%;
+    right: -5%;
+}
+
+.date5 {
+    top: 65%;
+    right: -5%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* 开关
+ */
+ .toggle2{
+        position: absolute; /* 设置绝对定位 */
+    font-size: .30rem !important;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 15px 0 0;
+ 
+  }
+
+  .toggle2-input{
+    display: none;
+  }
+  
+  .toggle2-button{
+    position: relative;
+    display: inline-block;
+    line-height: 0.2rem; 
+    width: 2.7rem!important;
+    height:  .5rem!important;
+    text-transform: uppercase;
+    background: white;
+    color: #aaa;
+    border: 1px solid #ccc;
+    padding: .1rem .1rem .1rem .1rem!important;
+    transition: all 0.3s ease;
+    cursor: pointer;/
+
+  }
+  .toggle2-button:hover {
+    cursor: pointer; /* 鼠标悬停效果 */
+    background-color: rgba(255, 255, 255, 0.1); /* 鼠标悬停时背景半透明效果 */
+    color: #f0e68c; /* 悬停时字体颜色 */
+    }
+  .toggle2-button::before{
+    position: absolute;
+    top:  .2rem!important;
+    left:  .05rem!important;
+    display: inline-block;
+    width:.2rem!important;
+    height:.2rem!important;
+    background: #ccc;
+    content: "";
+    transition: all 0.3s ease;
+    border-radius: 50%;
+  }
+  
+  .toggle2-input:checked + .toggle2-button{
+    background: #00b3b4;
+    border-color: #00b3b4;
+    color: white;
+  }
+  
+  .toggle2-input:checked + .toggle2-button::before{
+    background: white;
+  }
+
+
+  .switch1{
+    top: 13%;
+    left: -130%; /* 修复了900x的拼写错误 */
+
+
+  }
+  .switch2{
+    top: 35%;
+    left: -130%; /* 修复了900x的拼写错误 */
+   
+
+  }
+  .switch3{
+    top: 10%;
+    left: -130%; /* 修复了900x的拼写错误 */
+
+
+  }
+
+  .switch4{
+    top: 20px;
+    left: -130%; /* 修复了900x的拼写错误 */
+
+  }
+
+  .switch5{
+    top: 60%;
+    left: -130%; /* 修复了900x的拼写错误 */
+  
+
+  }
+
+  .switch6{
+    top: 85%;
+    left: -130%; /* 修复了900x的拼写错误 */
+
+
+  }
+
+
+
+
+  /* 正向方向运动按钮 */
+
+
+  .button-3d-1 {
+    position: absolute; /* 绝对定位，基于父级容器 */
+    background-color: #027e89;
+    background-image: url('../assets/images/solit2.png'); /* 设置背景图片 */
+    background-size: cover; /* 让背景图片覆盖整个容器 */
+    border: none;
+    
+    color: rgb(255, 255, 255);
+    width: 2.4rem!important; /* 按钮宽度 */
+    height:  0.7rem!important; /* 按钮宽度 */
+    padding: 0px 24px;
+    font-size: .25rem !important;
+    outline: none;
+    box-shadow: -6px 6px 0 hsl(190, 100%, 65%); /* 默认阴影 */
+ justify-content: center;  /* 水平居中 */
+  align-items: center;      /* 垂直居中 */
+    transition: transform 0.1s ease, box-shadow 0.3s ease; /* 添加平滑过渡效果 */
+}
+
+.button-3d-1:active {
+    transform: translateY(2px); /* 模拟按下的下陷效果，使按钮向下移动 */
+    box-shadow: -6px -6px 10px rgba(0, 0, 0, 0.2); /* 阴影朝上，给按钮增加下陷感 */
+}
+
+
+
+
+
+
+/* 开关按钮 */
+/* .btn-holder 类可以通过 style 属性在 HTML 中调整位置 */
+.btn-holder {
+    position: absolute;
+    transform: translate(-50%, -50%);
+
+}
+
+/* 按钮的通用样式 */
+.btn {
+    position: relative;
+    display: inline-block;
+    width: auto;
+    height: auto;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    min-height: 20%;
+    min-width: 80%;
+        box-shadow: -6px 6px 0 hsl(0, 0%, 58%); /* 默认阴影 */
+    transition: transform 0.1s ease, box-shadow 0.3s ease; /* 添加平滑过渡效果 */
+}
+
+.btn span {
+    position: relative;
+    display: inline-block;
+    font-size: .35rem !important;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    width: 100%;
+    padding: .15rem !important;
+    transition: 0.3s;
+}
+
+/* 按钮效果的基础样式 */
+.btn-2::before {
+    position: absolute;
+    content: "";
+    background-color: rgb(179, 179, 179);
+    transition: 0.3s ease-out;
+    
+}
+
+.btn-2 span {
+    color: rgb(255, 255, 255);
+
+    background-color: #027e89;
+    transition: 0.2s;
+    background-image: url('../assets/images/solit2.png'); /* 设置背景图片 */
+    background-size: cover; /* 让背景图片覆盖整个容器 */
+
+}
+
+/* 在按下或点击后保持的效果 */
+.btn.hover-slide-right::before {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    height: auto;
+    width: 0; /* 默认背景宽度为0 */
+    transition: width 0.3s ease-out;
+}
+
+.btn.hover-slide-right.active::before {
+    width: 100%; /* 点击后背景填满 */
+}
+
+.btn.hover-slide-right.active span {
+    color: rgb(252, 18, 18); /* 点击后文本颜色变白 */
+    background-color: rgba(251, 182, 109, 0.879);
+    background-image: url('../assets/images/solit3.png'); /* 设置背景图片 */
+    transition: color 0.2s 0.1s;
+ 
+    transform: translateY(6px); /* 模拟按下的下陷效果，使按钮向下移动 */
+    box-shadow: -6px -6px 10px rgba(70, 70, 71, 0.2); /* 阴影朝上，给按钮增加下陷感 */
+}
+
+
+/* 反转正转按钮 */
+
+
+/* 在容器内绝对定位开关按钮 */
+.checkbox-wrapper-10 {
+    position: relative; /* 绝对定位 */
+
+    /* 可以根据需要微调位置 */
+}
+
+/* 其余样式保持原样 */
+
+
+.checkbox-wrapper-10 .tgl {
+    display: none;
+}
+
+.checkbox-wrapper-10 .tgl-flip + .tgl-btn {
+    padding: .35rem !important;
+    transition: all 0.2s ease;
+    top: -0.55rem !important;
+    left: -2.75rem !important;
+    font-family: sans-serif;
+
+    font-size: .25rem !important;
+    outline: 0;
+    display: inline-block;
+    width: 2.55rem !important;
+    height: .35rem !important;
+    position: relative;
+    cursor: pointer;
+    
+}
+
+.checkbox-wrapper-10 .tgl-flip + .tgl-btn:before,
+.checkbox-wrapper-10 .tgl-flip + .tgl-btn:after {
+    display: inline-block;
+    transition: all 0.4s ease;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    line-height: 2em;
+    font-weight: bold;
+    color: #fff;
+
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    border-radius: 4px;
+}
+
+.checkbox-wrapper-10 .tgl-flip + .tgl-btn:before {
+    content: attr(data-tg-off);
+    background: #FF3A19;
+}
+
+.checkbox-wrapper-10 .tgl-flip + .tgl-btn:after {
+    content: attr(data-tg-on);
+    background: #02C66F;
+    transform: rotateY(-180deg);
+}
+
+.checkbox-wrapper-10 .tgl-flip:checked + .tgl-btn:before {
+    transform: rotateY(180deg);
+}
+
+.checkbox-wrapper-10 .tgl-flip:checked + .tgl-btn:after {
+    transform: rotateY(0);
+    left: 0;
+    background: #7FC6A6;
+}
+
+.checkbox-wrapper-10 .tgl-flip + .tgl-btn:active:before {
+    transform: rotateY(-20deg);
+}
+
+.checkbox-wrapper-10 .tgl-flip:checked + .tgl-btn:active:after {
+    transform: rotateY(20deg);
+}
+
+
+/* 通用按钮样式 */
+.btnguzhang {
+  display: inline-block;
+  padding: 0.1rem 0.1rem !important;
+  border: none;
+  border-radius: 0.25rem;
+  font-size: 0.175rem  !important;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+  text-align: center;
+  color: #fff;
+  background-color: #217093;    /* 主色调 */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  margin-right: 0.5rem;
+}
+
+/* 悬停状态 */
+.btnguzhang:hover {
+  background-color: #1a5a70;
+}
+
+/* 清空日志专用 */
+.btnguzhang-clear {
+  background-color: #c0392b;
+}
+.btnguzhang-clear:hover {
+  background-color: #992d22;
+}
+
+/* 导出日志专用 */
+.btnguzhang-export {
+  background-color: #27ae60;
+}
+.btnguzhang-export:hover {
+  background-color: #1f8a4f;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .container {
+        height: 90%;
+        width: 20%;
+        position: fixed;
+        overflow: hidden;
+        border-radius: 10px;
+        z-index: 99;
+    }
+    
+    .drag-bar {
+        height: 30px;
+        width: 100%;
+        background-color: #5aaad2;
+    }
+    
+.content {
+  position: relative;
+  height: calc(100% - 30px);
+  width: 100%;
+  background-color: #f1f3f4d9;
+  display: flex;
+  flex-direction: column; /* 垂直排列 */
+}
+
+
+.receive {
+  flex: 7; /* 70% */
+  overflow-y: auto;
+}
+
+.send {
+  flex: 3; /* 30% */
+  background-color: #e0e0e0; /* 发送区域背景色示例 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+/* 表格样式 */
+.receive table {
+    width: 100%;
+    table-layout: fixed; /* 固定表格布局 */
+    border-collapse: collapse;
+}
+
+/* 每列的宽度比例 */
+.receive .col-2 {
+    width: 20%; /* 2 的比例 */
+}
+.receive .col-3 {
+    width: 20%; /* 2 的比例 */
+}
+
+.receive .col-4 {
+    width: 40%; /* 4 的比例 */
+}
+
+/* 表头样式 */
+.receive thead th {
+    position: sticky; /* 固定表头 */
+    top: 0; /* 固定在顶部 */
+    background-color: #19abff7a; /* 表头背景颜色 */
+    color: #ffffff; /* 表头文字颜色 */
+    padding: 10px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 10%;
+}
+
+/* 表格行的交替背景色 */
+.receive tbody tr:nth-child(odd) {
+    background-color: #ffffff84; /* 表头背景颜色 */
+}
+
+.receive tbody tr:nth-child(even) {
+    background-color: #19abff81; /* 表头背景颜色 */
+}
+
+/* 单元格样式 */
+.receive td, .receive th {
+   
+  white-space: normal;      /* 允许自动换行 */
+  word-break: break-all;    /* 在任何位置换行（适合长字符串如 0xAA0xBB...） */
+
+    padding: 0.1rem!important;
+    color: #000000; /* 表头文字颜色 */
+    font-size: 0.12rem!important;
+    text-align: center;
+    font-family: '微软雅黑';
+}
+.filters {
+  display: flex !important;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+
+.filter-container {
+  display: flex;
+  align-items: center;
+}
+
+.filter-container label {
+  margin-right: 0.1rem;
+  font-weight: bold;
+  font-size: 0.15rem;
+  color: #333;
+}
+
+.filter-container select {
+  padding: 0.1rem 0.1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: white;
+  font-size: 0.15rem;
+}
+
+
+
+.input-container2 {
+
+
+    justify-content: space-between; /* 将文字和输入框放在两侧 */
+    align-items: center;
+    background-color: #002f4b7b;
+    padding: 5% 5%;
+    border: 2px solid #0993ae;
+    margin-bottom: 5%;
+    color: #00aaff;
+    font-size: 0.19rem !important;
+    position: absolute; /* 绝对定位 */
+    top: 1.55rem !important;
+    right:0%; /* 距离左侧 10px */
+    width: 4.55rem !important;
+    height:0.75rem !important;
+}
+
+/* 标签样式 */
+.input-container2 label {
+    margin: 10%;
+     right:60%; /* 距离左侧 10px */
+    color: #ffffff; /* 左侧文字颜色 */
+    font-size: 100%; /* 左侧文字大小 */
+    cursor: pointer; /* 鼠标悬停效果 */
+}
+.input-container2 label:hover {
+   
+
+    color: #6e6e6e; /* 悬停时字体颜色 */
+    }
+
+/* 输入框样式 */
+.input-container2 input {
+  
+    text-align: right;
+    background-color: transparent;
+   height: 90%;
+    border: none;
+    outline: none;
+    width: 50%; /* 设置容器的宽度 */
+    font-size: 130%; /* 输入框文字大小 */
+    background-color: #0000007b;
+    color: #ff0000; 
+    text-align: center;
+    cursor: pointer; /* 鼠标悬停效果 */
+}
+.input-container2 input:hover {
+   
+    background-color: rgba(255, 255, 255, 0.1); /* 鼠标悬停时背景半透明效果 */
+    color: #f0e68c; /* 悬停时字体颜色 */
+    }
+
+/* placeholder 样式 */
+.input-container2 input::placeholder {
+    color: #00aaff;
+    opacity: 0.8;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    /* 四条边可拖动区域 */
+    
+    .edge {
+        display: inline-block;
+        position: absolute;
+        z-index: 10;
+    }
+    
+    .edge-bottom {
+        width: 100%;
+        height: 6px;
+        bottom: -2px;
+    }
+    
+    .edge-top {
+        width: 100%;
+        height: 6px;
+        top: -2px;
+    }
+    
+    .edge-top:hover,
+    .edge-bottom:hover {
+        cursor: row-resize;
+    }
+    
+    .edge-left {
+        height: 100%;
+        width: 6px;
+        left: -2px;
+        top: 0;
+    }
+    
+    .edge-right {
+        height: 100%;
+        width: 6px;
+        right: -2px;
+        top: 0;
+    }
+    
+    .edge-left:hover,
+    .edge-right:hover {
+        cursor: col-resize;
+    }
+    /* 四边角 */
+    
+    .corner {
+        display: inline-block;
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        z-index: 11;
+    }
+    
+    .corner:hover {
+        cursor: move;
+    }
+    
+    .corner-lt {
+        top: -2px;
+        left: -2px;
+    }
+    
+    .corner-lb {
+        bottom: -2px;
+        left: -2px;
+    }
+    
+    .corner-rt {
+        top: -2px;
+        right: -2px;
+    }
+    
+    .corner-rb {
+        bottom: -2px;
+        right: -2px;
+    }
+    
+    * {
+        user-select: none;
+    }
+    
+ 
+    .w-ext {
+        position: absolute;
+        display: inline-block;
+        width: 3%;
+        height: 1%;
+        background-color: #9b9b9b;
+        border-radius: 50px;
+        top: 10px;
+        box-shadow: 0 0 10px 0.3px rgba(0, 0, 0, 0.2);
+    }
+    
+    .w-out {
+        left: 18px;
+        background-color: #ff5f57;
+    }
+    
+    .w-out:hover:before {
+        content: "";
+        background-color: rgba(32, 28, 28, 0.782);
+        position: absolute;
+        top: 4.3px;
+        left: 1.6px;
+        width: 8px;
+        height: 1.15px;
+        transform: rotate(45deg);
+    }
+    
+    .w-out:hover:after {
+        content: "";
+        background-color: rgba(32, 28, 28, 0.782);
+        ;
+        position: absolute;
+        top: 4.7px;
+        left: 1.6px;
+        width: 8px;
+        height: 1.15px;
+        transform: rotate(-45deg);
+    }
+    
+    .w-narrow {
+        left: 37px;
+        background-color: #febc2e;
+    }
+    
+    .w-narrow:hover::before {
+        content: "";
+        background-color: rgba(32, 28, 28, 0.782);
+        position: absolute;
+        top: 5px;
+        left: 1.4px;
+        width: 8px;
+        border-radius: 1px;
+        height: 1.5px;
+    }
+    
+    .w-ext {
+        left: 56px;
+        background-color: #29c940;
+    }
+    
+    .w-ext:hover::before {
+        content: "";
+        background-color: #004e00;
+        position: absolute;
+        display: block;
+        top: 2px;
+        left: 1.8px;
+        width: 7px;
+        height: 7px;
+        border-radius: 1px;
+    }
+    
+    .w-ext:hover::after {
+        content: "";
+        background-color: #29c940;
+        position: absolute;
+        display: block;
+        top: 4.5px;
+        left: 0.8px;
+        width: 10px;
+        height: 2px;
+        transform: rotate(-45deg);
+    }
+
+
+img {
+  -webkit-user-drag: none;
+  user-drag: none;
+  pointer-events: none; /* 若完全不希望交互，可加此行 */
+}
+
+
+
+#fasongid {
+  transform: scale(0.5);
+  transform-origin: top left; /* 可调整为 center center 根据需要 */
+}

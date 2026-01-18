@@ -1,0 +1,23 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build can_server",
+      "type": "shell",
+      "command": "g++",
+      "args": [
+        "-std=c++17",              // C++17
+        "-DCPPHTTPLIB_USE_POLL",   // httplib poll 支持
+        "-I.",                     // 在当前目录找 httplib.h、json.hpp、ECanVci.h
+        "-g",                      // 调试信息，可选
+        "can_server.cpp",          // 源文件
+        "-o", "can_server.exe",    // 输出文件
+        "-lws2_32",                // Winsock2
+        "-lECanVci64",             // CAN 驱动库
+        "-lECanVci"                //（视你的 SDK 而定）
+      ],
+      "group": { "kind": "build", "isDefault": true },
+      "problemMatcher": ["$gcc"]
+    }
+  ]
+}
