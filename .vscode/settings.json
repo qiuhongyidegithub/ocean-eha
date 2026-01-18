@@ -88,5 +88,6 @@
         "span": "cpp",
         "valarray": "cpp"
     },
-    "C_Cpp.errorSquiggles": "disabled"
+    "C_Cpp.errorSquiggles": "disabled",
+    "cmake.sourceDirectory": "C:/Users/23298/Desktop/电视抓斗/cpp-httplib-master"
 }
