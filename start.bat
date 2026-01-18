@@ -13,7 +13,7 @@ echo 正在运行 SerialPort_server.exe...
 echo 等待三秒钟等待设备启动
 start "" cmd /c "chcp 65001 && SerialPort_server.exe"
 
-timeout /t 5 /nobreak
+timeout /t 8 /nobreak
 taskkill /f /im node.exe
 
 pause

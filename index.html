@@ -19,7 +19,7 @@
     src="js/jquery.js">    
 
     </script>
-
+     
     <script>
         $(function () 
         {
@@ -428,11 +428,11 @@
         </div>
         <div class="center-cen fl">
             <div class="cen-top">
-<!-- 
-                    <div class="date-container date3">
+
+                    <div class="date-container date5">
                         <div class="label"><b>实际电流A</b></div>
                         <div class="value" id="actual-current">0A</div>
-                    </div> -->
+                    </div>
                     
                     <div class="date-container date2">
                         <div class="label"><b>实际扭矩Nm</b></div>
@@ -443,15 +443,17 @@
                         <div class="label"><b>实际转速rpm</b></div>
                         <div class="value" id="actual-Rotationalspeed">0KW</div>
                     </div>
-<!-- 
+
                     <div class="date-container date4">
-                        <div class="label"><b>实际电压V</b></div>
-                        <div class="value" id="actual-power">0KW</div>
-                    </div> -->
+                        <div class="label"><b>温度状况</b></div>
+                        <div class="value" id="actual-power">正常</div>
+                    </div>
                     <div class="date-container date3">
                         <div class="label"><b>实际速度MM/S</b></div>
                         <div class="value" id="actual-zhuansu">0mm/s</div>
                     </div>
+
+                    
 
                                         <!-- <div class="date-container date4">
                         <div class="label"><b>电机温度℃</b></div>
@@ -588,7 +590,7 @@
                             font-size: .25rem !important;
                             width: 1.8rem !important;
                             height: .5rem !important;">
-                              <option value="位置">位置控制</option>
+                              <option value="位置">抚仙湖测试</option>
                             <option value="速度">速度控制</option>
                             <option value="压力">压力控制</option>
                                     <option value="耐久">耐久性测试</option>
@@ -602,7 +604,7 @@
                     </div>
                     <div class="input-container" id="input-container-5" style="display: none; top: 2.55rem !important; right: 0px;  ">
                         <label>最大转矩（N.m）</label>
-                        <input data-type="number" type="text" data-field="expectAcceleration" placeholder="变量值" id="acceleration-input"autocomplete="off">
+                        <input data-type="number" type="text" data-field="expectAcceleration" placeholder="变量值" id="acceleration-inputzhuanju"autocomplete="off">
                     </div>
 
 
@@ -664,10 +666,10 @@
                         <label>点动距离(mm)</label>
                         <input id="expectedTOPDistanceDisplay" data-type="number" type="text" data-field="expectedTOPDistance" placeholder="变量值" autocomplete="off">
                     </div> 
-                    <div class="input-container" id="input-container-6" style="display: flex; top: 2.55rem !important; right: 0px;  ">
+                    <!-- <div class="input-container" id="input-container-6" style="display: flex; top: 2.55rem !important; right: 0px;  ">
                         <label >限制速度 (mm/s)</label>
                         <input data-type="number" type="text" data-field="speedlimit" id="speedlimit-input" placeholder="变量值" autocomplete="off">
-                    </div>    
+                    </div>     -->
 
                     <label id="switchone" for="toggle2" class="toggle2 switch1" style="display: none;">
                         <input type="checkbox" id="toggle2" class="toggle2-input" autocomplete="off">
@@ -679,10 +681,10 @@
                         <span class="toggle2-button">开启力位混控</span>
                       </label>
 
-                      <label id="switchfour" for="toggle5" class="toggle2 switch4" style="display: flex;top: 3.7rem!important; left: -3.2rem!important; width:2.8rem!important; height: 0.8rem!important; position: absolute;">
+                      <!-- <label id="switchfour" for="toggle5" class="toggle2 switch4" style="display: flex;top: 3.7rem!important; left: -3.2rem!important; width:2.8rem!important; height: 0.8rem!important; position: absolute;">
                         <input type="checkbox" id="toggle5" class="toggle2-input" autocomplete="off">
                         <span class="toggle2-button">开启速度限制</span>
-                      </label>
+                      </label> -->
 
 
      
@@ -711,11 +713,17 @@
 
 
                       <div class="button-container">
-                        <button id="zhengxiang" class="button-3d-1" style="top: 4.75rem!important; left: -2.9rem!important; width: 100%; height: 40%; display: none;position: absolute;">正向</button>
-                        <button id="fanxiang" class="button-3d-1" style="top: 5.75rem!important; left: -2.9rem!important; width: 100%; height: 40%; display: none;position: absolute;">反向</button>
+                        <button id="zhengxiang" class="button-3d-1" style="top: 4.75rem!important; left: -2.9rem!important; width: 100%; height: 40%; display: none;position: absolute;">切割</button>
+                        <button id="fanxiang" class="button-3d-1" style="top: 5.75rem!important; left: -2.9rem!important; width: 100%; height: 40%; display: none;position: absolute;">复位</button>
+
+
+
+                               <button id="zhengxiangqiege" class="button-3d-1" style="top: 4.75rem!important; left: -2.9rem!important; width: 100%; height: 40%; display: none;position: absolute;">正向切割</button>
+                        <button id="fanxiangqiege" class="button-3d-1" style="top: 5.75rem!important; left: -2.9rem!important; width: 100%; height: 40%; display: none;position: absolute;">反向复位</button>
                    
-                        <button id="yuandian" class="button-3d-1" style="top: 3.6rem!important; left:-.3rem!important;  display: flex;position: absolute;">返回原点</button>
-                        <button id="guiling" class="button-3d-1" style="bottom: -310%; left: -140%; display: none;position: absolute;">转速归零</button>
+                   
+                        <button id="yuandian" class="button-3d-1" style="top: 3.6rem!important; left:-.3rem!important;  display: none;position: absolute;">返回原点</button>
+                        <button id="guiling" class="button-3d-1" style="top: 3.6rem!important; left:-.3rem!important; display: none;position: absolute;">转速归零</button>
                     </div>
                     <div class="btn-holder" style="top: 5.0rem!important; left:0.9rem!important; width: 130%; height: 50%; position: absolute; ">
                         <button id="startBtn" class="btn btn-2 hover-slide-right" onclick="toggleExclusive(this, 'stopBtn'); updateStatus(this)">
@@ -749,8 +757,8 @@
                                 -webkit-appearance: none; /* 使 select 在某些浏览器上显示一致 */
                                 height: 40%;">
                                 <option value="无模式">请选择控制模式</option>
-                                <option value="定位">手动控制</option>
-                                <option value="点动">自动控制</option>
+                                <option value="定位">速度切割</option>
+                                <option value="点动">位置控制</option>
                             </select>     
                                    
                         </div>  
@@ -828,7 +836,7 @@
 <script src="js/echarts.min.js"></script>
 
 <script src="js/fontscroll.js"></script>
-<script src="js/echarts.js"></script>
+
 
 <script>
 
@@ -838,13 +846,13 @@
 const variables = {
     expectedSpeed: 0,
     expectedtorque:0,
-    expectedDistance:20,  // 确保初始化为数字类型
+    expectedDistance:-20,  // 确保初始化为数字类型
     expectAcceleration: 0,
     speedlimit:null,
     expectedTOPDistance: 20, // 设置步长为 20
     expectedPressure: 0,
     nowexpectedSpeed: 0,
-    nowexpectedDistance: 20,
+    nowexpectedDistance: -20,
     nowexpectedPressure: 0,
     Actualcurrent: 0,
     Actualtorque: 0,
@@ -854,8 +862,8 @@ const variables = {
     errorbit:0,
     Actualzhuansu:0,
       Actualwendu:0,
-    zuida:250,
-    zuixiao:20,
+    zuida:78,
+    zuixiao:-20,
     expectedid: 0,
      expectedsenddate: "0x00", 
      shiyancishu:5000,
@@ -906,18 +914,18 @@ const variables = {
 
 
 
-        if(variables.expectedDistance>250)
+        if(variables.expectedDistance>78)
 {
-variables.expectedDistance=250;
-document.getElementById('expectedDistanceDisplay').innerText = 250;
- addFaultLog("推杆01号", "低", "设置范围超出最大范围，已设置250", formatTime(new Date()));
+variables.expectedDistance=78;
+document.getElementById('expectedDistanceDisplay').innerText = 78;
+ addFaultLog("推杆01号", "低", "设置范围超出最大范围，已设置78", formatTime(new Date()));
 }
 
-if(variables.expectedDistance<20)
+if(variables.expectedDistance<-20)
 {
-variables.expectedDistance=20;
-document.getElementById('expectedDistanceDisplay').innerText =20;
-addFaultLog("推杆01号", "低", "设置范围超出最小范围，已设置20", formatTime(new Date()));
+variables.expectedDistance=-20;
+document.getElementById('expectedDistanceDisplay').innerText =-20;
+addFaultLog("推杆01号", "低", "设置范围超出最小范围，已设置-20", formatTime(new Date()));
 }
         // 更新压力显示的值，单位为 KN
         document.getElementById('pressureDisplay').innerText = variables.nowexpectedPressure.toFixed(2);
@@ -938,10 +946,24 @@ addFaultLog("推杆01号", "低", "设置范围超出最小范围，已设置20"
         if (runStatus === "启动")
 {
    
-        // sendcandate101();
-        // sendcandate011();
-        // sendcandate011yuandian();
+                if(currentMode === '位置')
+        {
+    // sendserialdate101();
+        }
+    
         // sendcandate011suanfa();
+
+                if(currentMode === '位置'&&currentdistantState=== '定位')
+        {
+   sendserialdate031();
+        }
+        if(currentMode === '速度')
+        {
+        sendserialdate031();
+        }
+        sendserialdate011();
+        // sendserialdate011yuandian();
+        // sendserialdate011suanfa();
 
        naijiumode(); // 刷新页面显示
    
@@ -1110,7 +1132,7 @@ function updateActualValues() {
 if(lasterrorxianwie===0)
 {
 // addFaultLog("推杆01号", "低", "超出限位", formatTime(new Date()));
-   updatexianweiStatus(false);
+//    updatexianweiStatus(false);
    lasterrorxianwie=1;
 }
  
@@ -1121,9 +1143,9 @@ if(lasterrorxianwie===0)
    updatexianweiStatus(true);
    lasterrorxianwie=0;
 }
-    // document.getElementById("actual-current").textContent = variables.Actualcurrent.toFixed(2);
+     document.getElementById("actual-current").textContent = variables.Actualcurrent.toFixed(2);
     document.getElementById("actual-torque").textContent = variables.Actualtorque.toFixed(2);
-    // document.getElementById("actual-power").textContent = variables.Actualpower.toFixed(2);
+  //  document.getElementById("actual-power").textContent = variables.Actualpower.toString(16);
     document.getElementById("actual-Rotationalspeed").textContent = variables.ActualRotationalspeed.toFixed(2);
      document.getElementById("actual-zhuansu").textContent = variables.Actualzhuansu.toFixed(2);
 
@@ -1194,10 +1216,18 @@ function updatexianweiStatus(isConnected) {
     updateConnectionStatus(false);
 
 
-
+  setInterval(() => {
+  if (Date.now() - lastGoodTime > 3000) {
+    updateConnectionStatus(false);
+  }
+}, 200);
 
     document.getElementById("toggle2").addEventListener("change", function() {
-        var accelerationInput = document.getElementById("acceleration-input");
+
+
+ var accelerationInput = document.getElementById("acceleration-inputzhuanju");
+
+
         // 如果复选框被选中，则移除 disabled 属性，使其可编辑，否则设置 disabled
         if (this.checked) {
             
@@ -1229,24 +1259,44 @@ function updatecontrolMode() {
 
 
     if (currentdistantState === '点动') {
-      
+              resetButtons();
+                   document.getElementById('input-container-1').style.display = 'none';
+              document.getElementById('input-container-5').style.display = 'none';
             zhengxiangButton.style.display = 'block';
             fanxiangButton.style.display = 'block';
-            document.getElementById('input-container-3').style.display = 'none';
-            document.getElementById('input-container-4').style.display = 'flex';
-        } else if(currentdistantState === '定位') {
-            zhengxiangButton.style.display = 'none';
-            fanxiangButton.style.display = 'none';
+                  zhengxiangqiegeButton.style.display = 'none';
+            fanxiangqiegeButton.style.display = 'none';
+                      yuandianButton.style.display = 'block';
+                         guilingButton.style.display = 'none';
             document.getElementById('input-container-3').style.display = 'flex';
             document.getElementById('input-container-4').style.display = 'none';
+        } else if(currentdistantState === '定位') {
+                  resetButtons();
+            zhengxiangButton.style.display = 'none';
+                 guilingButton.style.display = 'block';
+                 yuandianButton.style.display = 'none';
+            fanxiangButton.style.display = 'none';
+                           zhengxiangqiegeButton.style.display = 'block';
+            fanxiangqiegeButton.style.display = 'block';
+            document.getElementById('input-container-3').style.display = 'none';
+            document.getElementById('input-container-4').style.display = 'none';
+             document.getElementById('input-container-1').style.display = 'flex';
+              document.getElementById('input-container-5').style.display = 'flex';
+        
         }
         else if(currentdistantState === '无模式') 
         {
+                  resetButtons();
+                         document.getElementById('input-container-1').style.display = 'none';
+              document.getElementById('input-container-5').style.display = 'none';
             zhengxiangButton.style.display = 'none';
             fanxiangButton.style.display = 'none';
+                       guilingButton.style.display = 'none';
+               yuandianButton.style.display = 'none';
             document.getElementById('input-container-3').style.display = 'none';
             document.getElementById('input-container-4').style.display = 'none';
-
+              zhengxiangqiegeButton.style.display = 'none';
+            fanxiangqiegeButton.style.display = 'none';
         }
 
 
@@ -1287,11 +1337,14 @@ function updatesuanfaMode() {
     document.getElementById("distanceDisplay").style.color = "rgb(58, 237, 183)";
 
         // 隐藏正向和反向按钮
-        controlmodeButton.style.display='none'
-        suanfamodeButton.style.display='none'
+           guilingButton.style.display = 'none';
+        controlmodeButton.style.display='none';
+        suanfamodeButton.style.display='none';
         zhengxiangButton.style.display = 'none';
         fanxiangButton.style.display = 'none';
         yuandianButton.style.display = 'none';
+                          zhengxiangqiegeButton.style.display = 'none';
+            fanxiangqiegeButton.style.display = 'none';
     // 隐藏所有输入容器和开关
     document.querySelectorAll('.input-container').forEach(container => {
         container.style.display = 'none';
@@ -1307,8 +1360,8 @@ resetButtons();
   
           variables.expectedSpeed =0;
           variables.expectAcceleration =0;
-          variables.zuida =250;
-                variables.zuixiao =20;
+          variables.zuida =78;
+                variables.zuixiao -20;
         updatecandate()
         document.getElementById("cicle1").classList.add("active-cicle");
         document.getElementById("content1").classList.add("active-content");
@@ -1328,8 +1381,8 @@ resetButtons();
  resetButtons();   
          variables.expectedSpeed =0;
           variables.expectAcceleration =0;
-      variables.zuida =250;
-                variables.zuixiao =20;
+      variables.zuida =78;
+                variables.zuixiao =-20;
         updatecandate()
         document.getElementById("cicle2").classList.add("active-cicle");
         document.getElementById("content2").classList.add("active-content");
@@ -1347,44 +1400,43 @@ resetButtons();
         resetButtons();
          variables.expectedSpeed =0;
           variables.expectAcceleration =0;
-           variables.zuida =250;
-                variables.zuixiao =20;
+           variables.zuida =78;
+                variables.zuixiao =-20;
         updatecandate()
         document.getElementById("cicle3").classList.add("active-cicle");
         document.getElementById("content3").classList.add("active-content");
-  
-        document.getElementById('input-container-6').style.display = 'flex';
+        yuandianButton.style.display = 'none';
+        // document.getElementById('input-container-6').style.display = 'flex';
         progressTitle.textContent = "位置进度";
         
         if (currentdistantState === '点动') {
-            zhengxiangButton.style.display = 'block';
-            fanxiangButton.style.display = 'block';
+
             document.getElementById('input-container-3').style.display = 'none';
             document.getElementById('input-container-4').style.display = 'flex';
+            yuandianButton.style.display = 'block';
         } else if(currentdistantState === '定位') {
-            zhengxiangButton.style.display = 'none';
-            fanxiangButton.style.display = 'none';
+
             document.getElementById('input-container-3').style.display = 'flex';
             document.getElementById('input-container-4').style.display = 'none';
+            guilingButton.style.display = 'block';
         }
         else if(currentdistantState === '无模式') 
         {
-            zhengxiangButton.style.display = 'none';
-            fanxiangButton.style.display = 'none';
+       
             document.getElementById('input-container-3').style.display = 'none';
             document.getElementById('input-container-4').style.display = 'none';
 
         }
 
  
-        document.getElementById('switchfour').style.display = 'flex';
+        // document.getElementById('switchfour').style.display = 'flex';
           document.getElementById('controlmode-select').style.display = 'flex';
           document.getElementById('suanfamode-select').style.display = 'none';
 
 
 
   
-        yuandianButton.style.display = 'block';
+        
         document.getElementById('zhengfan').style.display = 'none';
         document.getElementById('guiling').style.display = 'none';
    
@@ -1833,6 +1885,9 @@ const togglePointhunhe = document.getElementById("toggle6");
 const controlmodeButton = document.getElementById("controlmode-select");
 const suanfamodeButton = document.getElementById("suanfamode-select");
 const zhengxiangButton = document.getElementById("zhengxiang");
+const zhengxiangqiegeButton = document.getElementById("zhengxiangqiege");
+const fanxiangqiegeButton = document.getElementById("fanxiangqiege");
+
 const fanxiangButton = document.getElementById("fanxiang");
 const yuandianButton = document.getElementById("yuandian");
 const guilingButton = document.getElementById("guiling");
@@ -1849,47 +1904,107 @@ function updateStateDisplay() {
 
 
 zhengxiangButton.addEventListener("click", function() {
-    variables.expectedDistance = Number(variables.expectedDistance) + Number(variables.expectedTOPDistance);
-    if( variables.expectedDistance >250)
-{
-    variables.expectedDistance =250;
-    addFaultLog("推杆01号", "低", "设置范围超出最大范围，已设置250", formatTime(new Date()));
-}
-    console.log("正向按下，expectedDistance 增加:", variables.expectedDistance);
-    expectedDistanceInput.value = variables.expectedDistance;
-        if (runStatus === "启动") {
 
-    // sendcandate101();
+
+    variables.expectedDistance =34;
+   document.getElementById('expectedDistanceDisplay').value = variables.expectedDistance;
+        let canId = [0x01, 0x01]; 
+        let data = [0x40, 0x19,0x00,0x00]; 
+                 sendRS485(canId, data);
+
+
+   
 
 }
-}
+
 );
 
 // 反向按钮点击事件
 fanxiangButton.addEventListener("click", function() {
-    variables.expectedDistance = Number(variables.expectedDistance) - Number(variables.expectedTOPDistance);
-    if( variables.expectedDistance <20)
-{
-    variables.expectedDistance =20;
-    addFaultLog("推杆01号", "低", "设置范围超出最小范围，已设置20", formatTime(new Date()));
+ 
+
+    variables.expectedDistance =-20;
+   document.getElementById('expectedDistanceDisplay').value = variables.expectedDistance;
+  
+
+        let canId = [0x01, 0x01]; 
+        let data = [0x40, 0x19,0x00,0x00]; 
+                 sendRS485(canId, data);
 }
-    console.log("反向按下，expectedDistance 减少:", variables.expectedDistance);
-    expectedDistanceInput.value = variables.expectedDistance;
+
+);
+
+yuandianButton.addEventListener("click", function() {
+ 
+
+    variables.expectedDistance =-20;
+   document.getElementById('expectedDistanceDisplay').value = variables.expectedDistance;
+  
+      let canId = [0x01, 0x01]; 
+        let data = [0x40, 0x19,0x00,0x00]; 
+                 sendRS485(canId, data);
+}
+
+);
+
+
+
+guilingButton.addEventListener("click", function() {
+
+
+    variables.expectedSpeed =0;
+       variables.expectAcceleration =0;
+   document.getElementById('expectedSpeedDisplay').value = variables.expectedSpeed;
+   document.getElementById('acceleration-inputzhuanju').value = variables.expectAcceleration;
+
 
  if (runStatus === "启动") {
 
-    // sendcandate101();
+ sendserialdate031guiling();
 
 }
 });
 
+zhengxiangqiegeButton.addEventListener("click", function() {
+
+    variables.expectedDistance =78;
+   document.getElementById('expectedDistanceDisplay').value = variables.expectedDistance;
+    variables.expectedSpeed =1500;
+       variables.expectAcceleration =4;
+   document.getElementById('expectedSpeedDisplay').value = variables.expectedSpeed;
+   document.getElementById('acceleration-inputzhuanju').value = variables.expectAcceleration;
+
+
+ if (runStatus === "启动") {
+
+ sendserialdate031guiling();
+
+}
+});
+
+fanxiangqiegeButton.addEventListener("click", function() {
+
+    variables.expectedDistance =-20;
+   document.getElementById('expectedDistanceDisplay').value = variables.expectedDistance;
+    variables.expectedSpeed =-1500;
+       variables.expectAcceleration =4;
+   document.getElementById('expectedSpeedDisplay').value = variables.expectedSpeed;
+   document.getElementById('acceleration-inputzhuanju').value = variables.expectAcceleration;
+
+
+ if (runStatus === "启动") {
+
+ sendserialdate031guiling();
+
+}
+});
 
 let yuandianzhiwei =0;
 
 
 document.getElementById("yuandian").addEventListener("click", function() {
     // 将 expectedDistance 设置为 0
-    variables.expectedDistance =20;
+    variables.expectedDistance =-20;
     yuandianzhiwei =1;
     // 可以根据需要打印更新后的变量值
     console.log("expectedDistance 已更新为: " + variables.expectedDistance);
@@ -2012,16 +2127,22 @@ function updateStatus(button) {
     // 执行相应的操作
     if (runStatus === "启动") {
     updateRUNStatus(true);
-    // sendcandate011open()
-    // sendcandate011();
-    // sendcandate101();
-    // // sendcandate011suanfa();
-    // sendcandate031();
+    // sendserialdate011open()
+    sendserialdate011();
+
+        // sendcandate011suanfa();
+
+
+        if(currentMode === '速度')
+        {
+        sendserialdate031();
+        }
+
 
 } else {
- 
+    sendserialdate011();
     updateRUNStatus(false);
-    // sendcandate011close();
+
 }
 }
 
@@ -2116,8 +2237,8 @@ function updateImagePosition(position) {
 
 
   // 把 [20,250] 映射到 [0,100] 的百分比
-  const MIN_POS = 20;
-  const MAX_POS = 250;
+  const MIN_POS = -20;
+  const MAX_POS = 78;
   const clamped = Math.min(Math.max(position, MIN_POS), MAX_POS);
   const ratio   = (clamped - MIN_POS) / (MAX_POS - MIN_POS);
   const pct     = ratio * 100;  // 0 ~ 100
@@ -2562,21 +2683,21 @@ addReceiveData(
                 // variables.Actualpower = (voltageHigh * 256) + voltageLow; 电压解析
 
             // 检查每个故障位
-                    if (variables.errorbit & 0x01) { // 位0: 过流保护
-                    addFaultLog("推杆01号", "高", "电机过流", formatTime(new Date()));
-                    }
+                    // if (variables.errorbit & 0x01) { // 位0: 过流保护
+                    // addFaultLog("推杆01号", "高", "电机过流", formatTime(new Date()));
+                    // }
 
-                    if (variables.errorbit & 0x02) { // 位1: 过载保护
-                    addFaultLog("推杆01号", "高", "电机过载", formatTime(new Date()));
-                    }
+                    // if (variables.errorbit & 0x02) { // 位1: 过载保护
+                    // addFaultLog("推杆01号", "高", "电机过载", formatTime(new Date()));
+                    // }
 
-                    if (variables.errorbit & 0x04) { // 位2: 电机过温报警
-                    addFaultLog("推杆01号", "高", "电机过温", formatTime(new Date()));
-                    }
+                    // if (variables.errorbit & 0x04) { // 位2: 电机过温报警
+                    // addFaultLog("推杆01号", "高", "电机过温", formatTime(new Date()));
+                    // }
 
-                    if (variables.errorbit & 0x08) { // 位3: 驱动器过温报警
-                    addFaultLog("推杆01号", "高", "电机过温", formatTime(new Date()));
-                    }
+                    // if (variables.errorbit & 0x08) { // 位3: 驱动器过温报警
+                    // addFaultLog("推杆01号", "高", "电机过温", formatTime(new Date()));
+                    // }
 // 构造限位状态文本（如果 applicable）
 let parsed = `转速: ${variables.ActualRotationalspeed} rpm, 扭矩: ${variables.Actualtorque.toFixed(1)} Nm, 电流: ${variables.Actualcurrent.toFixed(1)} A, 故障位: ${variables.errorbit}`;
 
@@ -2599,16 +2720,6 @@ addReceiveData(
     }
 
 
-  setInterval(function() {
-      receiveRS485();
-  
-  }, 20)
-
-  setInterval(() => {
-  if (Date.now() - lastGoodTime > 1000) {
-    updateConnectionStatus(false);
-  }
-}, 500);
 
 
 
@@ -2624,17 +2735,15 @@ addReceiveData(
      
 let  startflag=0;
     //0x011编码、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、
-    function sendcandate011()
+    function sendserialdate011()
     {
-        let canId = 0x011;  
+        let canId = [0x00, 0x11];   
         let data = [0x00, 0x00];  
 
 
         if (runStatus === "启动") {
             data[0] = 0x01;  // 如果是启动，设置为 0x01
-        } else {
-            data[0] = 0x00;  // 如果不是启动，设置为 0x00
-        }
+        } 
     
 
     if( currentdistantState === '点动')
@@ -2647,7 +2756,7 @@ let  startflag=0;
         data[1]=0X0c  ;
     }
 
-    if(currentMode === "速度") 
+    if( currentdistantState === '定位'||currentMode === "速度") 
     {
         data[1]=0X01  ;
     }
@@ -2660,9 +2769,9 @@ let  startflag=0;
 
     if (JSON.stringify(data) !== JSON.stringify(lastSentData011)) {
         
-            for (let i = 0; i < 10; i++) {
-                sendCAN(canId, data);
-            }
+    
+                sendRS485(canId, data);
+       
 
 addSendData(
   "0x" + canId.toString(16).toUpperCase(),
@@ -2675,29 +2784,27 @@ addSendData(
         }
 
 
-        if (startflag===1) {
+        // if (startflag===1) {
         
-            for (let i = 0; i < 10; i++) {
-                sendCAN(canId, data);
-            }
+        //     for (let i = 0; i < 10; i++) {
+        //         sendRS485(canId, data);
+        //     }
         
-            lastSentData011 = [...data];
-            startflag=0;
-        }
+        //     lastSentData011 = [...data];
+        //     startflag=0;
+        // }
 
     }
     //0x011编码、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、
-    function sendcandate011yuandian()
+    function sendserialdate011yuandian()
     {
-        let canId = 0x011;  
+        let canId = [0x00, 0x11]; 
         let data = [0x00, 0x00];  
 
 
         if (runStatus === "启动") {
             data[0] = 0x01;  // 如果是启动，设置为 0x01
-        } else {
-            data[0] = 0x00;  // 如果不是启动，设置为 0x00
-        }
+        } 
 
         data[1]=0X0A  ;
     
@@ -2710,9 +2817,9 @@ addSendData(
 
         if(yuandianzhiwei===1)
         {
-            for (let i = 0; i < 10; i++) {
-                sendCAN(canId, data);
-            }
+         
+                sendRS485(canId, data);
+          
             yuandianzhiwei=0;
                             addSendData(
         "0x" + canId.toString(16).toUpperCase(),
@@ -2726,9 +2833,9 @@ addSendData(
 
     }
     //0x011算法编码、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、
-    function sendcandate011suanfa()
+    function sendserialdate011suanfa()
     {
-        let canId = 0x011;  
+        let canId = [0x00, 0x11];  
         let data = [0x00, 0x00];  
 
 
@@ -2756,9 +2863,9 @@ addSendData(
 
     if (JSON.stringify(data) !== JSON.stringify(lastSentData011suanfa)) {
         
-            for (let i = 0; i < 10; i++) {
-                sendCAN(canId, data);
-            }
+  
+                sendRS485(canId, data);
+         
                                     addSendData(
         "0x" + canId.toString(16).toUpperCase(),
         data.map(d => "0x" + d.toString(16).toUpperCase()),
@@ -2771,13 +2878,13 @@ addSendData(
     }
 
     //0x011编码、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、
-    function sendcandate011close()
+    function sendserialdate011close()
     {
-        let canId = 0x011;  
-        let data = [0x00, 0x00];  
-        for (let i = 0; i < 10; i++) {
+        let canId = [0x00, 0x11];   
+        let data = [0x01, 0x00];  
+   
                 sendCAN(canId, data);
-            }
+         
                                         addSendData(
         "0x" + canId.toString(16).toUpperCase(),
         data.map(d => "0x" + d.toString(16).toUpperCase()),
@@ -2786,14 +2893,14 @@ addSendData(
     );
     }
  //0x011编码、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、
-    function sendcandate011open()
+    function sendserialdate011open()
     {
-        let canId = 0x011;  
+        let canId = [0x00, 0x11]; 
         let data = [0x01, 0x00];  
           startflag=1;
-        for (let i = 0; i < 10; i++) {
-                sendCAN(canId, data);
-            }
+ 
+                sendRS485(canId, data);
+       
                                         addSendData(
         "0x" + canId.toString(16).toUpperCase(),
         data.map(d => "0x" + d.toString(16).toUpperCase()),
@@ -2802,11 +2909,11 @@ addSendData(
     );
     }
     //0x101编码、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、
-    function sendcandate101()
+    function sendserialdate101()
     {
-        let canId = 0x101;  // 设置 CAN ID 为 0x011
+        let canId = [0x01, 0x01]; 
         let data = [0x00, 0x00,0x00,0x00]; 
-        let hexValue1 =  variables.expectedDistance;
+        let hexValue1 =  variables.expectedDistance+34;
         if(hexValue1<=0)
     {
         hexValue1=0;
@@ -2822,9 +2929,9 @@ addSendData(
     ];
     if (JSON.stringify(data) !== JSON.stringify(lastSentData101)) {
             // 发送 CAN 数据
-            for (let i = 0; i < 10; i++) {
-                sendCAN(canId, data);
-            }
+         
+                sendRS485(canId, data);
+          
 
 
 addSendData(
@@ -2842,17 +2949,14 @@ addSendData(
 
 
 
-function sendcandate031() {
-    let canId = 0x031;  
+function sendserialdate031guiling() {
+    let canId = [0x03,0x01];  
     let data = [0x00, 0x00, 0x00, 0x00];  
 
 let speedValue = parseInt(variables.expectedSpeed, 10) + 3200;
 let speedhexValue = speedValue.toString(16).padStart(4, '0'); 
 
 
-
-
-  
     let torqueValue1 = variables.expectAcceleration* 10;  
        let torqueValue = parseInt(torqueValue1, 10);  
  
@@ -2867,13 +2971,10 @@ let speedhexValue = speedValue.toString(16).padStart(4, '0');
     data[3] = parseInt(torquehexValue.slice(0, 2), 16);  // 获取高字节
 
 
-    if (JSON.stringify(data) !== JSON.stringify(lastSentData031)) {
 
+  sendRS485(canId, data);  
 
-
-        for (let i = 0; i < 10; i++) {
-            sendCAN(canId, data);  
-        }
+  
             addSendData(
       "0x" + canId.toString(16).toUpperCase(),
       data.map(d => "0x" + d.toString(16).toUpperCase()),
@@ -2881,13 +2982,48 @@ let speedhexValue = speedValue.toString(16).padStart(4, '0');
       formatTime(new Date())
     );
   
-        lastSentData031 = [...data];
-    }
 }
 
+        //0x101编码、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、
+    function sendserialdate101yuandian()
+    {
+        let canId = [0x01, 0x01]; 
+        let data = [0x00, 0x00,0x00,0x00]; 
+         
+        let hexValue1 =  variables.expectedDistance+34;
+ 
+        let hexValue =  (hexValue1*100).toString(16).padStart(8, '0');  // 转换为十六进制并确保是 8 位
+   
 
-function sendcandate031fu() {
-    let canId = 0x031;  
+    data = [
+        parseInt(hexValue.slice(6, 8), 16),   // 低字节
+        parseInt(hexValue.slice(4, 6), 16),   // 第二字节
+        parseInt(hexValue.slice(2, 4), 16),   // 第三字节
+        parseInt(hexValue.slice(0, 2), 16)    // 高字节
+    ];
+
+                sendRS485(canId, data);
+          
+
+
+addSendData(
+  "0x" + canId.toString(16).toUpperCase(), // ID
+  data.map(d => "0x" + d.toString(16).toUpperCase()), // data 字符串数组
+  `当前设定位置:\n${variables.expectedDistance}`, // ✅ 正确换行
+  formatTime(new Date()) // 当前时间
+);
+
+            // 更新上次发送的数据
+
+
+    }
+
+
+
+
+
+function sendserialdate031fu() {
+    let canId =[0x00, 0x31]; 
     let data = [0x00, 0x00, 0x00, 0x00];  
 
 let speedValue = parseInt(-variables.expectedSpeed, 10) + 3200;
@@ -2913,9 +3049,9 @@ let speedhexValue = speedValue.toString(16).padStart(4, '0');
 
 
 
-        for (let i = 0; i < 10; i++) {
-            sendCAN(canId, data);  
-        }
+
+            sendRS485(canId, data);  
+      
             addSendData(
       "0x" + canId.toString(16).toUpperCase(),
       data.map(d => "0x" + d.toString(16).toUpperCase()),
@@ -2928,11 +3064,11 @@ let speedhexValue = speedValue.toString(16).padStart(4, '0');
 
 
 
-    function sendcandate101fuzhi(data)
+    function sendserialdate101fuzhi(data)
     {
 
     
-         let canId = 0x101;  
+         let canId = [0x03, 0x01]; 
          
   if (JSON.stringify(data) !== JSON.stringify(lastSentData101fuzhi)) {
 
@@ -2940,9 +3076,9 @@ let speedhexValue = speedValue.toString(16).padStart(4, '0');
         document.getElementById('acceleration-inputlaihui').innerText = variables.shiyanlaihui;
          console.log("当前来回已更新为: " + variables.shiyanlaihui);
 
-        for (let i = 0; i < 10; i++) {
-            sendCAN(canId, data);  
-        }
+    
+            sendRS485(canId, data);  
+        
             addSendData(
       "0x" + canId.toString(16).toUpperCase(),
       data.map(d => "0x" + d.toString(16).toUpperCase()),
@@ -2961,8 +3097,8 @@ let speedhexValue = speedValue.toString(16).padStart(4, '0');
 
 
 
-function sendcandate031zero() {
-    let canId = 0x031;  
+function sendserialdate031zero() {
+       let canId = [0x03,0x01];  
     let data = [0x00, 0x00, 0x00, 0x00];  
 
 let speedValue = parseInt(0, 10) + 3200;
@@ -2987,11 +3123,8 @@ let speedhexValue = speedValue.toString(16).padStart(4, '0');
 
 
    
-
-
-        for (let i = 0; i < 10; i++) {
-            sendCAN(canId, data);  
-        }
+            sendRS485(canId, data);  
+      
             addSendData(
       "0x" + canId.toString(16).toUpperCase(),
       data.map(d => "0x" + d.toString(16).toUpperCase()),
@@ -3001,6 +3134,70 @@ let speedhexValue = speedValue.toString(16).padStart(4, '0');
   
 
 }
+
+
+
+
+
+
+function sendserialdate031() {
+    let canId = [0x03,0x01];  
+    let data = [0x00, 0x00, 0x00, 0x00];  
+
+let speedValue = parseInt(variables.expectedSpeed, 10) + 3200;
+let speedhexValue = speedValue.toString(16).padStart(4, '0'); 
+
+
+    let torqueValue1 = variables.expectAcceleration* 10;  
+       let torqueValue = parseInt(torqueValue1, 10);  
+ 
+  
+    let torquehexValue = torqueValue.toString(16).padStart(2, '0'); 
+
+    data[0]=0X01;
+    // 根据状态设置 data[0]
+
+    data[1] = parseInt(speedhexValue.slice(0, 2), 16);  // 获取低字节
+    data[2] = parseInt(speedhexValue.slice(2, 4), 16);  // 获取高字节
+    data[3] = parseInt(torquehexValue.slice(0, 2), 16);  // 获取高字节
+
+
+  if (JSON.stringify(data) !== JSON.stringify(lastSentData031)) {
+
+
+
+           sendRS485(canId, data);  
+            addSendData(
+      "0x" + canId.toString(16).toUpperCase(),
+      data.map(d => "0x" + d.toString(16).toUpperCase()),
+      ` 设定速度: ${variables.expectedSpeed}, 设定转矩: ${variables.expectAcceleration}`,
+      formatTime(new Date())
+    );
+  
+        lastSentData031 = [...data];
+    }
+        
+     
+
+}
+
+
+
+
+
+
+function sendceshi() {
+    let canId = [0x03,0x01];  
+    let data = [0x00, 0x00, 0x00, 0x00];  
+
+
+            sendRS485(canId, data);  
+     
+
+}
+
+
+
 
 
 
@@ -3033,78 +3230,133 @@ document.addEventListener("DOMContentLoaded", function() {
         if (runStatus === "启动")
     {
     
-            // sendcandate101();
-            // sendcandate011();
-            // sendcandate011yuandian();
+            
+            sendserialdate011();
+
+
+          if(currentMode === '位置')
+            {
+        sendserialdate101();
+            }
+        
+            // sendcandate011suanfa();
+
+
+            if(currentMode === '速度')
+            {
+            sendserialdate031();
+            }
+
+            // sendserialdate011yuandian();
             // // sendcandate011suanfa();
-            // sendcandate031();
+            // sendserialdate031();
       
 
     }
     }   
 
-
-
-
-  sendcandate011close();
-
-  myChart.getDom().addEventListener('contextmenu', function (e) {
-    e.preventDefault(); // 阻止右键菜单
-    myChart.dispatchAction({
-        type: 'restore'  // 触发还原功能
-    });
-});
-
-
-
-
+let lastReceivedId485 = null;  // 确保变量初始化
+let lastReceivedData485 = null;
+let lastGoodTime485 = 0;
 let lastSent485Data = null;  // 保存上次发送的数据
+let lastSent485Data1 = { id: null, data: [] }; // 初始化 lastSent485Data1 为一个包含 id 和 data 的对象
+
+  sendserialdate011close();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+let isSending = false; // 用于检查是否正在发送数据，避免请求积压
+
+
+// 发送 RS485 数据的函数
 async function sendRS485(id, data) {
-    // 如果数据没有变化，不再发送
-    if (lastSent485Data && lastSent485Data.id === id && JSON.stringify(lastSent485Data.data) === JSON.stringify(data)) {
-        // console.log("数据未发生变化");
-        return;
+    if (isSending) {
+        console.log("上一个请求还未完成，跳过当前发送");
+        return;  // 如果正在发送数据，跳过当前发送
     }
 
+    isSending = true; // 设置为发送中
+
     console.log("发送的数据:", {
-        id: `0x${id.toString(16).toUpperCase()}`, // 以十六进制格式打印 ID
-        data: data.map(byte => `0x${byte.toString(16).padStart(2, '0').toUpperCase()}`) // 以十六进制格式打印数据字节
+        id: `0x${id.toString(16).toUpperCase()}`,
+        data: data.map(byte => `0x${byte.toString(16).padStart(2, '0').toUpperCase()}`)
     });
 
+    const frameStart = 0xAA;
+    const frameEnd = [0x00, 0x55];
+    const checksum = calculateChecksum(data);
+
+    const dataFrame = [
+        frameStart,
+        data.length + 2,  // 数据长度（包括 ID 和校验位）
+        id[0],  // ID 高字节
+        id[1],  // ID 低字节
+        ...data,  // 数据部分
+    //    checksum,  // 校验位
+        ...frameEnd  // 终止位
+    ];
+
     try {
-        const response = await fetch("http://localhost:8080/send_rs485", {  // 改成 /send_rs485
+        await new Promise(resolve => setTimeout(resolve, 50)); // 延迟 100ms，避免发送过快
+
+        const response = await fetch("http://localhost:8080/send_rs485", {
             method: 'PUT',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ id, data })  // 转换数据为 JSON 格式
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ id, data: dataFrame })
         });
 
-        // 读取响应并检查其格式
         const text = await response.text();  // 获取响应文本
-        console.log("Response text:", text);  // 打印响应文本
-        const result = text ? JSON.parse(text) : {}; 
+        console.log("Response text:", text);
+
+        const result = text ? JSON.parse(text) : {};
 
         if (response.ok) {
             console.log("RS485 信号发送成功", result);
         } else {
             console.error("RS485 信号发送失败", result);
         }
-
-        // 更新 lastSentData，保存当前发送的数据
-        lastSentData = { id, data };
-
     } catch (error) {
         console.error("发送失败:", error);
+    } finally {
+        isSending = false; // 发送完成，重置标志
     }
 }
 
-let lastReceivedId485 = null;  // 保存上一次接收到的 id
-let lastReceivedData485 = null;  // 保存上一次接收到的数据
-let lastGoodTime485 = 0;
+// 接收 RS485 数据的函数
+
+let isReceiving = false;  // 控制是否正在接收数据，防止重复请求
 
 async function receiveRS485() {
+    if (isReceiving) {
+        console.log("上一个请求还未完成，跳过当前接收");
+        return;  // 如果正在接收数据，跳过当前接收
+    }
+
+    isReceiving = true; // 设置为接收中
+
     try {
+        // 发起请求获取数据
         const response = await fetch("http://localhost:8080/receive_rs485", {
             method: "GET",
             headers: { "Content-Type": "application/json" },
@@ -3114,94 +3366,116 @@ async function receiveRS485() {
             throw new Error(`Network response was not ok: ${response.statusText}`);
         }
 
+        // 解析返回的 JSON 数据
         const result = await response.json();
-        // 判断接收到的id是否为0
+        console.log("Received RS485 data:", result);
+
+        // 判断接收到的 id 是否为 0，表示无效数据
         if (result.id === 0) {
-            // console.log("尚未接收到有效的 RS485 数据");
-            return;  // 如果id为0，表示没有接收到有效数据
+            console.log("尚未接收到有效的 RS485 数据");
+            return;  // 如果 id 为 0，表示没有接收到有效数据
         }
 
-        // 比较数据是否发生变化
+
+             lastGoodTime = Date.now();
+        lastGoodTime485 = Date.now();
+        updateConnectionStatus(true);
+        // 比较数据是否发生变化，避免重复处理
         if (result.id === lastReceivedId485 && JSON.stringify(result.data) === JSON.stringify(lastReceivedData485)) {
-            // console.log("数据未发生变化，跳过更新");
+            console.log("数据未发生变化，跳过更新");
             return;  // 数据没有变化，跳过处理
         }
 
         // 更新 lastReceivedId 和 lastReceivedData
+
         lastReceivedId485 = result.id;
         lastReceivedData485 = result.data;
-        updateConnectionStatus(true);
-        lastGoodTime485 = Date.now();
+   
+        // 从数据中解析 ID（从第3字节和第4字节合成 ID）
+        const id = (result.data[2] << 8) | result.data[3];
+        console.log("Received ID (Hex): 0x" + id.toString(16).toUpperCase());
+
+        // 提取数据部分（从第5字节开始）
+        const dataPart = result.data.slice(4, result.data.length );  // 去掉 '00 55'
+
+        // 打印数据部分为十六进制
+        const hexData = dataPart.map(byte => `0x${byte.toString(16).padStart(2, '0').toUpperCase()}`).join(' ');
+        console.log("Received data (Hex):", hexData);
 
         // 根据 id 解析数据
-        if (result.id === 0x012) {
+        if (id === 0x012) {
             let tempDistance = 0;
             let tempSpeed = 0;
 
             // 将小端字节数据转为 32 位有符号整数
-            tempDistance = (result.data[0]) | (result.data[1] << 8) | (result.data[2] << 16) | (result.data[3] << 24);
-            let raw = (result.data[4]) | (result.data[5] << 8);  // 0–65535
+            tempDistance = (dataPart[0]) | (dataPart[1] << 8) | (dataPart[2] << 16) | (dataPart[3] << 24);
+            let raw = (dataPart[4]) | (dataPart[5] << 8);  // 0–65535
 
             // 检查是否负数
             if (raw & 0x8000) {
-                raw = raw - 0x10000;  
+                raw = raw - 0x10000;
             }
             tempSpeed = raw;
 
-            variables.ActualSpeed = tempSpeed;  // 合并转速高位和低位
-            // console.log("原始十六进制值: " + tempDistance.toString(16)); // 打印十六进制值
-            // console.log("原始十六进制值: " + tempSpeed.toString(16)); // 打印十六进制值
-
+            variables.ActualSpeed = tempSpeed;
             let nowexpectedDistance = tempDistance / 100.0;
             variables.nowexpectedDistance = nowexpectedDistance - 32;
 
             // 限位警报解析
             variables.limitAlarm = result.data[6];  // 0:未限位, 1:伸出限位, 2:缩回限位
 
-            // 构造文本解析
+            // 打印解析后的文本
             const parsed = `距离: ${(variables.nowexpectedDistance).toFixed(2)} mm, 速度: ${variables.ActualSpeed} rpm, 限位: ${variables.limitAlarm}`;
+            console.log(parsed);
+
             addReceiveData(
-                "0x" + result.id.toString(16).toUpperCase(),
-                result.data.map(d => "0x" + d.toString(16).toUpperCase()),
+                "0x" + id.toString(16).toUpperCase(),
+                dataPart,  // 保留原始数据格式
                 parsed,
                 formatTime(new Date())
             );
 
-        } else if (result.id === 0x032) {
-            // 解析 0x032 数据格式
-            const rpmHigh = result.data[0];
-            const rpmLow = result.data[1];
-            variables.Actualtorque = result.data[2] / 10; // 实际扭矩*10 Nm
-            variables.errorbit = result.data[3]; // 故障位
-            variables.Actualcurrent = result.data[4] * 10; // 电流峰值*10 A
-            const voltageHigh = result.data[5];
-            const voltageLow = result.data[6];
+        } else if (id === 0x032) {
+
+            const rpmHigh = dataPart[0];
+            const rpmLow = dataPart[1];
+            variables.Actualtorque = dataPart[2] / 10; // 实际扭矩*10 Nm
+            variables.errorbit = dataPart[3]; // 故障位
+            variables.Actualcurrent = dataPart[4] * 10; // 电流峰值*10 A
+            const voltageHigh = dataPart[5];
+            const voltageLow = dataPart[6];
 
             variables.ActualRotationalspeed = (rpmHigh * 256) + rpmLow - 3200;  // 合并转速高位和低位
+            variables.Actualpower=(voltageHigh * 256) + voltageLow;
+            // 打印故障位
+            console.log("Error bits:", variables.errorbit);
 
-            // 检查每个故障位
-            if (variables.errorbit & 0x01) { // 位0: 过流保护
-                addFaultLog("推杆01号", "高", "电机过流", formatTime(new Date()));
-            }
+            // 检查每个故障位并打印
+                    // if (variables.errorbit & 0x01) { // 位0: 过流保护
+                    //  addFaultLog("推杆01号", "高", "电机过流", formatTime(new Date()));
+                    //  }
 
-            if (variables.errorbit & 0x02) { // 位1: 过载保护
-                addFaultLog("推杆01号", "高", "电机过载", formatTime(new Date()));
-            }
+                    //  if (variables.errorbit & 0x02) { // 位1: 过载保护
+                    //  addFaultLog("推杆01号", "高", "电机过载", formatTime(new Date()));
+                    //  }
 
-            if (variables.errorbit & 0x04) { // 位2: 电机过温报警
-                addFaultLog("推杆01号", "高", "电机过温", formatTime(new Date()));
-            }
+                    //  if (variables.errorbit & 0x04) { // 位2: 电机过温报警
+                    //  addFaultLog("推杆01号", "高", "电机即将过温", formatTime(new Date()));
+                    //  }
 
-            if (variables.errorbit & 0x08) { // 位3: 驱动器过温报警
-                addFaultLog("推杆01号", "高", "电机过温", formatTime(new Date()));
-            }
+                    //  if (variables.errorbit & 0x08) { // 位3: 驱动器过温报警
+                    //  addFaultLog("推杆01号", "高", "电机过温", formatTime(new Date()));
+                    // }
 
-            // 构造限位状态文本（如果 applicable）
-            const parsed = `转速: ${variables.ActualRotationalspeed} rpm, 扭矩: ${variables.Actualtorque.toFixed(1)} Nm, 电流: ${variables.Actualcurrent.toFixed(1)} A, 故障位: ${variables.errorbit}`;
+            // 构造限位状态文本
+            const parsed = `转速: ${variables.ActualRotationalspeed} rpm, 扭矩: ${variables.Actualtorque.toFixed(1)} Nm, 电流: ${variables.Actualcurrent.toFixed(1)} A,, 温度: ${variables.Actualpower.toString(16)} A 故障位: ${variables.errorbit}`;
+
+            // 打印构造后的文本
+            console.log(parsed);
 
             addReceiveData(
-                "0x" + result.id.toString(16).toUpperCase(),
-                result.data.map(byte => "0x" + byte.toString(16).toUpperCase()),
+                "0x" + id.toString(16).toUpperCase(),
+                dataPart,  // 保留原始数据格式
                 parsed,
                 formatTime(new Date())
             );
@@ -3209,7 +3483,27 @@ async function receiveRS485() {
 
     } catch (error) {
         console.error("Error fetching RS485 data:", error);
+    } finally {
+        isReceiving = false;  // 接收完成，重置标志
     }
+}
+
+
+// 每 500ms 接收一次数据
+function startReceiveAndSend() {
+    setInterval(function() {
+        receiveRS485();  // 调用接收函数
+    }, 30); // 调整接收频率为每 500ms 一次
+
+    // setInterval(function() {
+    //     sendRS485([0x01, 0x02], [0xAA, 0xBB, 0xCC]);  // 示例数据
+    // }, 1000); // 调整发送频率为每 500ms 一次
+}
+startReceiveAndSend();
+
+// 计算校验和（XOR 校验）
+function calculateChecksum(data) {
+    return data.reduce((checksum, byte) => checksum ^ byte, 0);
 }
 
 
@@ -3226,33 +3520,12 @@ async function receiveRS485() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  myChart.getDom().addEventListener('contextmenu', function (e) {
+    e.preventDefault(); // 阻止右键菜单
+    myChart.dispatchAction({
+        type: 'restore'  // 触发还原功能
+    });
+});
 
 
 
@@ -3269,7 +3542,7 @@ myChart2.getDom().addEventListener('contextmenu', function (e) {
 
 window.onbeforeunload = function(event) {
     console.log("页面关闭前执行的操作");
-    // sendcandate011close();
+    sendserialdate011close();
     return "网页关闭，已发送停止信号";
 };
 

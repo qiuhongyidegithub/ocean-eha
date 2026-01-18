@@ -1365,11 +1365,13 @@ p {
     width: 2.4rem!important; /* 按钮宽度 */
     height:  0.7rem!important; /* 按钮宽度 */
     padding: 0px 24px;
-    font-size: .25rem !important;
+    font-size: .35rem !important;
+    letter-spacing: 2px;
     outline: none;
     box-shadow: -6px 6px 0 hsl(190, 100%, 65%); /* 默认阴影 */
  justify-content: center;  /* 水平居中 */
   align-items: center;      /* 垂直居中 */
+  font-weight: bold;
     transition: transform 0.1s ease, box-shadow 0.3s ease; /* 添加平滑过渡效果 */
 }
 
